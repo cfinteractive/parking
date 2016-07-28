@@ -1,0 +1,1 @@
+var parking = {};  // namespace

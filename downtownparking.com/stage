@@ -1,0 +1,3 @@
+#!/bin/sh
+
+rsync -rvz _site/ cfstaging@staging.copacino.com:/var/www/vhosts/staging.copacino.com/httpdocs/parking --exclude '.git' --exclude 'deploy' --exclude 'stage' --exclude 'csv2json' --exclude '.*.swp' --exclude 'pullandpackage'

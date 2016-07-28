@@ -1,0 +1,47 @@
+#!/usr/bin/env ruby
+# encoding: utf-8
+
+require 'csv'
+require 'json'
+
+def dms_to_dd(coord)
+  degrees, minutes, seconds, direction = coord.strip.split(/[^0-9NSEW.]+/)
+  dd = degrees.to_f + minutes.to_f / 60 + seconds.to_f / (60 * 60)
+
+  if direction == "S" || direction == "W"
+    dd = dd * -1
+  end
+
+  dd
+end
+
+data = CSV.read(ARGV.shift, encoding: 'utf-8')
+headers = data.shift.map {|i| i.to_s}
+
+# n-dashes? Really?
+### data = data.map {|row| row.map {|cell| cell && cell.gsub(/\xE2\x80\x93/, '-') } }
+
+data_hash = data.map {|row| Hash[headers.zip(row)]}
+data_hash.delete_if {|row| row['active'] == 'FALSE'}
+id = 0
+data_hash.each do |row|
+  row['id'] = id
+  id = id + 1
+  row['lat'] = dms_to_dd(row['lat'])
+  row['lng'] = dms_to_dd(row['lng'])
+
+  # remove columns with empty headers
+  row.delete('')
+
+  # translate boolean columns to real boolean values
+  ['low_cost', 'flat_rate', 'epark', 'taxes_included'].each do |column|
+    if row[column] == 'TRUE' || row[column] == 'yes'
+      row[column] = true
+    else
+      row[column] = false
+    end
+  end
+end
+
+output = "parking.lots = #{JSON.pretty_generate(data_hash)};"
+puts output
