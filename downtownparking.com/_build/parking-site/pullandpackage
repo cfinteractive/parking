@@ -1,0 +1,24 @@
+#!/bin/bash
+echo Downloading lots data from google docs...
+wget --output-document=./test.csv "https://docs.google.com/spreadsheets/d/1bHj5bwDiML3oCjRILC8JbApxIxQWMxAu3ZJenxtEShs/export?format=csv"
+if [ -f ./js/lots-data-old.js ]
+  then 
+    echo Removing old backup lot data file....
+    rm -v ./js/lots-data-old.js
+fi
+if [ -f ./js/lots-data.js ]
+  then
+    echo Backing up old lot data file...
+    mv -v ./js/lots-data.js ./js/lots-data-old.js
+fi
+
+echo Converting lots data to JSON format...
+./csv2json ./test.csv > ./js/lots-data.js
+echo ./test.csv -to- ./js/lots-data.js
+
+echo Running Jekyll build...
+jekyll build
+
+echo Packaging web site into zip-file...
+./package
+rm ./test.csv

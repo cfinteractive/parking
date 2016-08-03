@@ -1,0 +1,2036 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ *
+ * Detailed information about this CSS: h5bp.com/css
+ *
+ * ==|== normalize ==========================================================
+ */
+
+
+/* =============================================================================
+   HTML5 display definitions
+   ========================================================================== */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+    display: block;
+}
+
+audio,
+canvas,
+video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+audio:not([controls]) {
+    display: none;
+}
+
+[hidden] {
+    display: none;
+}
+
+
+/* =============================================================================
+   Base
+   ========================================================================== */
+
+/*
+ * 1. Correct text resizing oddly in IE6/7 when body font-size is set using em units
+ * 2. Prevent iOS text size adjust on device orientation change, without disabling user zoom: h5bp.com/g
+ */
+
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+    font-family: 'Open Sans', sans-serif;
+    color: #222;
+}
+
+body {
+    margin: 0;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+
+/* =============================================================================
+   Links
+   ========================================================================== */
+
+a {
+    color: #008fd5;
+}
+
+a:visited {
+    color: #008fd5;
+}
+
+a:hover {
+    color: #417fc2;
+}
+
+a:focus {
+    outline: thin dotted;
+}
+
+/*
+ * Improve readability when focused and hovered in all browsers: h5bp.com/h
+ */
+
+a:hover,
+a:active {
+    outline: 0;
+}
+
+
+/* =============================================================================
+   Typography
+   ========================================================================== */
+
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+
+b,
+strong {
+    font-weight: bold;
+}
+
+blockquote {
+    margin: 1em 40px;
+}
+
+dfn {
+    font-style: italic;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+ins {
+    background: #ff9;
+    color: #000;
+    text-decoration: none;
+}
+
+mark {
+    background: #ff0;
+    color: #000;
+    font-style: italic;
+    font-weight: bold;
+}
+
+/*
+ * Redeclare monospace font family: h5bp.com/j
+ */
+
+pre,
+code,
+kbd,
+samp {
+    font-family: monospace, serif;
+    _font-family: 'courier new', monospace;
+    font-size: 1em;
+}
+
+/*
+ * Improve readability of pre-formatted text
+ */
+
+pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+q {
+    quotes: none;
+}
+
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+
+small {
+    font-size: 85%;
+}
+
+/*
+ * Position subscript and superscript content without affecting line-height: h5bp.com/k
+ */
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+
+/* =============================================================================
+   Lists
+   ========================================================================== */
+
+ul,
+ol {
+    margin: 1em 0;
+    padding: 0 0 0 40px;
+}
+
+dd {
+    margin: 0 0 0 40px;
+}
+
+nav ul,
+nav ol {
+    list-style: none;
+    list-style-image: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =============================================================================
+   Embedded content
+   ========================================================================== */
+
+/*
+ * 1. Improve image quality when scaled in IE7: h5bp.com/d
+ * 2. Remove the gap between images and borders on image containers: h5bp.com/i/440
+ */
+
+img {
+    border: 0;
+    vertical-align: middle;
+    -ms-interpolation-mode: bicubic;
+}
+
+/*
+ * Correct overflow not hidden in IE9
+ */
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+
+/* =============================================================================
+   Figures
+   ========================================================================== */
+
+figure {
+    margin: 0;
+}
+
+
+/* =============================================================================
+   Forms
+   ========================================================================== */
+
+form {
+    margin: 0;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Indicate that 'label' will shift focus to the associated form element
+ */
+
+label {
+    cursor: pointer;
+}
+
+/*
+ * 1. Correct color not inheriting in IE6/7/8/9
+ * 2. Correct alignment displayed oddly in IE6/7
+ */
+
+legend {
+    border: 0;
+    padding: 0;
+    white-space: normal;
+    *margin-left: -7px;
+}
+
+/*
+ * 1. Correct font-size not inheriting in all browsers
+ * 2. Remove margins in FF3/4 S5 Chrome
+ * 3. Define consistent vertical alignment display in all browsers
+ */
+
+button,
+input,
+select,
+textarea {
+    font-size: 100%;
+    margin: 0;
+    vertical-align: baseline;
+    *vertical-align: middle;
+}
+
+/*
+ * 1. Define line-height as normal to match FF3/4 (set using !important in the UA stylesheet)
+ */
+
+button,
+input {
+    line-height: normal;
+}
+
+/*
+ * 1. Display hand cursor for clickable form elements
+ * 2. Allow styling of clickable form elements in iOS
+ * 3. Correct inner spacing displayed oddly in IE7 (doesn't effect IE6)
+ */
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    cursor: pointer;
+    -webkit-appearance: button;
+    *overflow: visible;
+}
+
+/*
+ * Re-set default cursor for disabled elements
+ */
+
+button[disabled],
+input[disabled] {
+    cursor: default;
+}
+
+/*
+ * Consistent box sizing and appearance
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+    *width: 13px;
+    *height: 13px;
+}
+
+input[type="search"] {
+    -webkit-appearance: textfield;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+}
+
+/*
+ * Remove inner padding and border in FF3/4: h5bp.com/l
+ */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/*
+ * 1. Remove default vertical scrollbar in IE6/7/8/9
+ * 2. Allow only vertical resizing
+ */
+
+textarea {
+    overflow: auto;
+    vertical-align: top;
+    resize: vertical;
+}
+
+
+/* =============================================================================
+   Tables
+   ========================================================================== */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td {
+    vertical-align: top;
+}
+
+
+/* =============================================================================
+   Chrome Frame Prompt
+   ========================================================================== */
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ==|== primary styles =====================================================
+   Author: Lonnon Foster <lfoster@copacino.com>, Copacino + Fujikado
+   ========================================================================== */
+
+body {
+  background: white;
+}
+
+.map-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: auto;
+  height: auto;
+  margin: 0 0 0 360px;
+}
+.map-container.subpage {
+  position: static;
+  top: auto;
+  bottom: auto;
+  left: auto;
+  right: auto;
+}
+.pick-map {
+  margin: 0;
+  padding: 20px;
+  background: #0088ca;
+}
+.pick-map-container,
+.mini-map {
+  position: relative;
+  top: auto;
+  bottom: auto;
+  left: auto;
+  right: auto;
+  width: 100%;
+  height: 315px;
+  margin: 0;
+}
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  width: auto;
+  height: auto;
+  z-index: 10;
+}
+#mini-map {
+  width: 100%;
+  height: 100%;
+}
+.mini-map .find-me {
+  position: absolute;
+  display: block;
+  top: 12px;
+  right: 10px;
+  width: 25px;
+  height: 25px;
+  background: #e4eafa url(../img/sprites.png) -558px -558px no-repeat;
+  background-size: 673px 673px;
+  z-index: 100;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #8c8b87;
+  box-shadow: 0px 2px 5px #8c8b87;
+}
+
+.sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 30px;
+  width: 360px;
+  height: auto;
+  margin: 90px 0 0;
+  padding: 0 0 90px 0;
+  font-size: 14px;
+  background: white;
+  z-index: 50;
+}
+.sidebar header hgroup {
+  position: absolute;
+  top: -90px;
+  /* top: 0; */
+  left: 0;
+  width: 360px;
+  height: 90px;
+  background: url(../img/dsp-header-logo.png) no-repeat;
+}
+.sidebar header hgroup a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.sidebar header h1,
+.sidebar header h2 {
+  margin: 0;
+  text-indent: -5999px;
+}
+
+footer .social {
+  float: left;
+}
+.mobile-home .social {
+  margin-top: 20px;
+  padding-left: 20px;
+}
+.fb-like,
+.twitter-share-button {
+  width: 90px !important;
+  margin-right: 4px;
+}
+.fb_iframe_widget span:first-child {
+  display: block;
+}
+.google-plus-one {
+  display: inline-block;
+  width: 70px;
+  height: 20px;
+  overflow: hidden;
+}
+
+.search {
+  position: absolute;
+  /* top: 180px; */
+  top: 90px;
+  width: 360px;
+  height: 71px;
+  padding: 15px;
+  background: #eee;
+  border-bottom: 1px solid #ccc;
+  z-index: 100;
+}
+/* .search .spinner { */
+  /* position: absolute; */
+  /* display: none; */
+  /* top: 27px;  */
+  /* right: 50px; */
+  /* width: 15px; */
+  /* height: 15px; */
+  /* background: url('../img/search-icons.png'); */
+  /* background-position: 0 0; */
+  /* animation: 2s linear 0s normal none infinite running spin; */
+/* } */
+/* @keyframes spin { */
+  /* 0% { */
+    /* transform: rotate(0deg); */
+  /* } */
+  /* 100% { */
+    /* transform: rotate(359deg); */
+  /* } */
+/* } */
+.search .close {
+  position: absolute;
+  opacity: 0;
+  top: 27px;
+  right: 25px;
+  width: 15px;
+  height: 15px;
+  background: url('../img/search-icons.png');
+  background-position: -15px -15px;
+  transition: .4s opacity;
+}
+.search .close.show {
+  opacity: 1;
+}
+.search .close a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: text;
+}
+.search .close.show a {
+  cursor: pointer;
+}
+.search input {
+  width: 100%;
+  height: 40px;
+  padding: 10px 45px 10px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  line-height: 40px;
+}
+.pac-container {
+  margin-left: 1px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.intro {
+  font-size: 14px;
+}
+.intro h2 {
+  margin-top: 0;
+  font-size: 16px;
+}
+.mobile header .lot-list-intro {
+  padding-bottom: 10px;
+  border-bottom: 2px solid #0074ad;
+  font-size: 14px;
+}
+.lot-list-intro a,
+.lot-list-intro a:hover {
+  color: white;
+}
+
+.box {
+}
+.box h2 {
+  margin-top: 0;
+  padding: 6px 0;
+  text-align: center;
+  font-weight: normal;
+  font-size: 16px;
+  color: white;
+  background: #008fd5;
+}
+.box ul {
+  margin: 0;
+  padding: 20px;
+  list-style-type: none;
+}
+.box li {
+  margin-bottom: 10px;
+}
+
+.banner-ad {
+  width: 360px;
+  height: 100px;
+}
+.banner-ad a {
+  display: block;
+  width: 360px;
+  height: 100px;
+}
+.sidebar .banner-ad {
+  border-top: 1px solid #ccc;
+}
+.mothers-day a,
+.first-thursdays a,
+.first-and-columbia a,
+.waterfront a {
+  background-repeat: no-repeat;
+  text-indent: -5999px;
+}
+.mothers-day a {
+  background-image: url(../img/banner-mother-desktop.png);
+}
+.first-thursdays a {
+  background-image: url(../img/banner-thursday-desktop.png);
+  background-position: center;
+}
+.first-and-columbia a {
+  background-image: url(../img/banner-columbia-desktop.png);
+}
+.waterfront a {
+  background-image: url(../img/banner-waterfront-desktop.png);
+}
+
+.key {
+  border-top: 1px solid #ddd;
+  font-size: 12px;
+  line-height: 1.5em;
+}
+.key ul {
+  position: relative;
+  margin: 0;
+  padding: 15px;
+}
+.key li {
+  display: block;
+  float: left;
+  width: 50%;
+  min-height: 24px;
+  margin-bottom: 16px;
+  padding: 3px 0 0 30px;
+}
+.key li.regular {
+  background: url(../img/key-regular.png) no-repeat;
+}
+.key li.low {
+  background: url(../img/key-low.png) no-repeat;
+}
+.key li.epark {
+  background: url(../img/key-epark.png) no-repeat;
+}
+.key li.flat {
+  background: url(../img/key-flat.png) no-repeat;
+}
+
+.promotions { 
+  background: #fedeb6;
+  color: black;
+}
+.promotions h2,
+.mobile-home .promotions h2 {
+  background: #f79434;
+}
+.mobile-home .promotions a {
+  color: #0074ad;
+}
+.mobile-home .promotions a:hover {
+  color: white;
+}
+
+.resources,
+.mobile-home .resources {
+  text-align: center;
+}
+.resources h2,
+.mobile-home .resources h2 {
+  margin: 0;
+  background: #008fd5;
+  color: white;
+}
+.resources a,
+.mobile-home .resources a {
+  text-decoration: none;
+  color: #008fd5;
+}
+
+.btn {
+  display: block;
+  width: 25%;
+  margin: 15px auto 0;
+  border: 1px solid #0074ad;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 12px;
+  color: #0074ad;
+  background: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.btn:hover {
+  color: white;
+  background: #417fc2;
+}
+
+#quick-zoom-template {
+  display: none;
+}
+#quick-zoom * {
+  font: 12px/28px 'Open Sans', sans-serif;
+}
+.quick-zoom {
+  margin-top: 20px;
+  margin-right: 20px;
+  width: 155px;
+  background: white;
+  z-index: 50;
+}
+.quick-zoom h2 {
+  margin-bottom: 0;
+}
+.quick-zoom ul {
+  margin: 0;
+  padding: 0;
+}
+.quick-zoom li {
+  width: 100%;
+  height: 28px;
+  margin-bottom: 0;
+  text-align: center;
+  border-bottom: 1px solid #9fbcca;
+}
+.quick-zoom li:last-child {
+  border-bottom: none;
+}
+.quick-zoom a:visited,
+.quick-zoom a {
+  display: block;
+  width: 100%;
+  height: 28px;
+  text-decoration: none;
+  color: #008fd5;
+}
+.quick-zoom a:hover {
+  background: #008fd5;
+  color: white;
+}
+.quick-zoom .print-maps {
+  height: 30px;
+  border-top: 1px solid #9fbcca;
+}
+.quick-zoom .print-maps a {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 2px;
+}
+.quick-zoom .print-maps a:hover {
+  background: #008fd5;
+  color: white;
+}
+
+.view-arrow {
+  display: none;
+  position: absolute;
+  top: 161px;
+  left: 360px;
+  width: 0;
+  height: 0;
+  border-left: 20px solid #bce9ff;
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  border-right: none;
+  z-index: 10000;
+}
+.view-arrow.show {
+  display: block;
+}
+
+.infowindow {
+  width: 300px;
+  font-size: 14px;
+  font-family: Georgia, serif !important;
+  line-height: 1.35;
+}
+.infowindow a {
+  font-family: Georgia, serif !important;
+}
+.infowindow h2 {
+  margin: 0;
+  font-size: 16px;
+}
+.infowindow p {
+  margin: 8px 0;
+}
+.infowindow table {
+  margin-bottom: 5px;
+}
+.infowindow td {
+  padding-left: 10px;
+}
+.infowindow p.address {
+  margin-bottom: 0;
+}
+.infowindow p.phone {
+  margin-top: 0;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  border-top: 1px solid #ccc;
+  font-size: 14px;
+  line-height: 30px;
+  z-index: 50;
+  background: white;
+}
+.footer-wrap {
+  width: 440px;
+  margin: 0 auto;
+}
+footer ul {
+  float: left;
+  margin: 0 auto;
+  padding: 0;
+  list-style-type: none;
+}
+footer li {
+  float: left;
+  margin-right: 10px;
+}
+footer a,
+footer a:visited {
+  text-decoration: none;
+}
+.mobile footer {
+  position: static;
+  left: 0;
+  margin-top: 10px;
+}
+@media (max-width: 470px) {
+  .footer-wrap {
+    width: 230px;
+  }
+  footer ul:first-child {
+    margin-left: 10px;
+  }
+}
+
+.home article.lot {
+  padding: 15px 20px;
+}
+.home article.lot header {
+  position: relative;
+}
+.home article.lot header h1 {
+  display: none;
+}
+.home article.lot header h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: normal;
+  color: #0074ad;
+}
+.home article.lot header p.address {
+  margin: 0;
+}
+.home article.lot header p.phone {
+  display: none;
+}
+.home article.lot header .back,
+.home article.lot header .directions {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  width: 150px;
+  height: 40px;
+  margin: 0;
+  font-size: 14px;
+}
+.home article.lot header .back {
+  right: 160px;
+  width: 80px;
+}
+.home article.lot header .back span {
+  display: block;
+  position: absolute;
+  top: -4px;
+  left: 9px;
+  height: 40px;
+  font-size: 20px;
+  line-height: 40px;
+}
+.home article.lot header .back a,
+.home article.lot header .directions a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 40px;
+  text-decoration: none;
+}
+.home article.lot header .back a:hover,
+.home article.lot header .directions a:hover {
+  color: white;
+}
+
+.mobile-home {
+  display: none;
+  margin: 0 auto;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+}
+.mobile-home a {
+  color: white;
+}
+.mobile-home header {
+  background: #008fd5;
+}
+.mobile-home header h1 {
+  height: 43px;
+  width: 320px;
+  margin: 0 auto;
+  background: url(../img/header-logo-m.png) no-repeat;
+  background-size: 320px 43px;
+}
+.mobile-home header h1 a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.mobile-home header p {
+  margin: 10px 0 20px;
+  padding: 0 20px;
+  font-size: 15px;
+}
+.mobile-home h2 {
+  height: 32px;
+  background-color: #0074ad;
+  background-size: 320px 32px;
+}
+.find-parking {
+  background: url(../img/find-parking.png) no-repeat;
+}
+.current-promotions {
+  /* display: none; */
+  background: url(../img/current-promotions.png) no-repeat;
+}
+.current-promotions + .link-list {
+  /* display: none; */
+}
+.link-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 10px 20px;
+  background: #0088ca;
+}
+.link-list li {
+  margin-bottom: 10px;
+}
+.link-list li:last-child {
+  margin-bottom: 0;
+}
+.link-list span {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-left: 4px;
+  vertical-align: middle;
+  background: url(../img/sprites.png) -474px -474px no-repeat;
+  background-size: 673px 673px;
+}
+.link-list a,
+.link-list a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.mobile {
+  font-family: 'Open Sans', sans-serif;
+}
+.mobile header {
+  position: relative;
+  color: black;
+  background: #008fd5;
+}
+.mobile header h1 {
+  margin: 0 auto;
+  height: 43px;
+  width: 320px;
+  background: url(../img/header-logo-m.png) no-repeat;
+  background-size: 320px 43px;
+}
+.mobile header h1 a {
+  display: block;
+  width: 100%;
+  height: 43px;
+}
+.mobile header h2 {
+  position: relative;
+  height: 35px;
+  margin: 0;
+  padding: 0;
+  font-size: 19px;
+  line-height: 35px;
+  background: #eee;
+  color: #0074ad;
+  text-align: center;
+  text-transform: uppercase;
+}
+.mobile .lot header h2 {
+  position: relative;
+  height: 54px;
+  line-height: 54px;
+}
+.mobile header h2 a {
+  display: block;
+  width: 100%;
+  height: 35px;
+}
+.mobile .lot header h2 a {
+  height: 54px;
+}
+.mobile header h2 a,
+.mobile header h2 a:hover {
+  color: white;
+  text-decoration: none;
+}
+.mobile header p {
+  margin: 0;
+  padding: 10px 20px;
+  background: #bce9ff;
+  font-size: 12px;
+}
+.mobile header p.address {
+  padding: 50px 20px 0 20px;
+}
+.mobile header p.phone {
+  padding: 0 20px 10px 20px;
+}
+.mobile header .back,
+.mobile header .directions {
+  position: absolute;
+  bottom: 55px;
+  margin: 0;
+  height: 24px;
+  line-height: 24px;
+}
+.mobile header .directions {
+  right: 20px;
+  width: 150px;
+}
+.mobile header .back {
+  left: 20px;
+  width: 80px;
+}
+.mobile header h2.header-view-by-neighborhood .back,
+.mobile header h2.header-garage-hours .back,
+.mobile header h2.header-view-on-map .back,
+.mobile header h2.header-near-me .back,
+.mobile header h2.header-popular-destinations .back {
+  top: 5px;
+  left: 5px;
+  width: 60px;
+  border: none;
+  font-weight: normal;
+}
+.mobile header h2.header-view-by-neighborhood .back a,
+.mobile header h2.header-garage-hours .back a,
+.mobile header h2.header-view-on-map .back a,
+.mobile header h2.header-near-me .back a,
+.mobile header h2.header-popular-destinations .back a {
+  color: #008fd5;
+}
+.mobile header h2.header-view-by-neighborhood .back a:hover,
+.mobile header h2.header-garage-hours .back a:hover,
+.mobile header h2.header-view-on-map .back a:hover,
+.mobile header h2.header-near-me .back a:hover,
+.mobile header h2.header-popular-destinations .back a:hover {
+  color: white;
+}
+.mobile header .back span {
+  display: block;
+  position: absolute;
+  top: -4px;
+  left: 9px;
+  height: 24px;
+  font-size: 20px;
+  line-height: 24px;
+}
+.mobile header .back a,
+.mobile header .directions a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  font-size: 14px;
+  line-height: 24px;
+  text-decoration: none;
+}
+.mobile header .back a:hover,
+.mobile header .directions a:hover {
+  color: white;
+}
+.mobile header p {
+  color: #0074ad;
+}
+.mobile header p.destination-title {
+  padding: 0 20px 10px;
+  font-weight: bold;
+}
+.mobile header p.map-intro {
+  font-size: 14px;
+}
+
+.mobile header h2.header-view-by-neighborhood,
+.mobile header h2.header-popular-destinations,
+.mobile header h2.header-near-me,
+.mobile header h2.header-3-hour-garages,
+.mobile header h2.header-7-or-less-eve-wknd,
+.mobile header h2.header-e-park-garages,
+.mobile header h2.header-view-on-map,
+.mobile header h2.header-garage-hours {
+  background: #0074ad;
+  color: white;
+}
+.mobile header h2.header-view-by-neighborhood,
+.mobile header h2.header-popular-destinations {
+  padding-left: 40px;
+}
+.mobile header h2.no-icon {
+  padding-left: 20px;
+}
+
+.mobile .lot header h2 span {
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  width: 34px;
+  height: 34px;
+}
+.header-icon-regular span {
+  background: url(../img/sprites.png) -66px -66px no-repeat;
+  background-size: 673px 673px;
+}
+.header-icon-low span {
+  background: url(../img/sprites.png) -100px -100px no-repeat;
+  background-size: 673px 673px;
+}
+.header-icon-flat span {
+  background: url(../img/sprites.png) -605px -605px no-repeat;
+  background-size: 673px 673px;
+}
+.header-icon-epark span {
+  background: url(../img/sprites.png) -134px -134px no-repeat;
+  background-size: 673px 673px;
+}
+
+.sort {
+  position: relative;
+  height: 30px;
+  margin: 0;
+  padding: 0 20px 0 130px;
+  color: white;
+  background: #0088ca;
+  font-size: 16px;
+  line-height: 30px;
+}
+.no-sort {
+  display: hidden;
+}
+.sort span {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 200px;
+}
+.sort a {
+  text-decoration: none;
+  color: white;
+}
+.sort .selected {
+  text-decoration: underline;
+}
+.sort ul {
+  margin: 0;
+  list-style-type: none;
+}
+.sort li {
+  position: absolute;
+  top: 0;
+}
+.sort .distance {
+  right: 20px;
+}
+.sort .alpha {
+  right: 120px;
+}
+
+.lot-list,
+.home-list,
+.mobile-home-list {
+  position: relative;
+  display: none;
+  width: 100%;
+  margin: 71px 0 0;
+  padding: 0;
+  color: #0074ad;
+}
+.mobile-home-list {
+  margin-top: 71px;
+}
+.hours-lots,
+.neighborhoods {
+  display: none;
+}
+.mobile .hours-lots {
+  display: block;
+}
+.hours-lots.hours-lots-show,
+.neighborhoods.neighborhoods-show {
+  display: block;
+}
+.hours-lots .lot-list,
+.lot-list.pick-map-results,
+.mobile .lot-list,
+.neighborhoods .lot-list {
+  margin-top: 0;
+}
+.hours-lots .lot-list.back-list,
+.neighborhoods .lot-list.back-list {
+  margin-top: 71px;
+}
+.lot-list-show,
+.home-list-show,
+.mobile-home-list-show {
+  display: block;
+}
+.lot-list li,
+.home-list li,
+.mobile-home-list li {
+  display: block;
+  height: 50px;
+}
+.mobile .lot-list li {
+  padding-left: 16px;
+}
+.lot-list li:nth-child(odd),
+.home-list li:nth-child(odd),
+.mobile-home-list li:nth-child(odd) {
+  background: #bce9ff;
+}
+.lot-list li:nth-child(even),
+.home-list li:nth-child(even),
+.mobile-home-list li:nth-child(even) {
+  background: white;
+}
+.lot-list a,
+.home-list a,
+.mobile-home-list a,
+.lot-list a:hover,
+.home-list a:hover,
+.mobile-home-list a:hover {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: #0074ad;
+}
+.home-list .view-on-map .caption { 
+  display: none;
+}
+.home-list .view-on-map .caption.caption-show { 
+  display: inline;
+}
+.home-list .view-on-map .instructions {
+  display: none;
+  font-size: 14px;
+  font-weight: normal;
+}
+.instructions .point {
+  font-size: 24px;
+}
+.home-list .view-on-map .instructions.instructions-show {
+  display: inline;
+}
+.lot-list .wrapper {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  display: table-cell;
+  vertical-align: middle;
+}
+.home-list a .wrapper,
+.mobile-home-list a .wrapper,
+.neighborhoods a .wrapper {
+  line-height: 50px;
+  text-align: center;
+}
+.neighborhoods a .wrapper {
+  padding-left: 36px;
+}
+.neighborhoods .lot-list.back-list a .wrapper {
+  text-align: left;
+}
+.lot-list .distance {
+  position: absolute;
+  top: 29px;
+  right: 8px;
+  font-size: 12px;
+  font-weight: normal;
+  text-align: right;
+}
+.list .lot-list,
+.list .home-list,
+.list .mobile-home-list,
+.hours-lots .lot-list,
+.neighborhoods .lot-list {
+  font-size: 16px;
+  font-weight: bold;
+}
+.list .lot-list li,
+.list .home-list li,
+.list .lot-list a,
+.list .home-list a,
+.list .lot-list .wrapper,
+.list .home-list .wrapper {
+  height: 50px;
+}
+.lot-list li.epark {
+  height: 100px;
+}
+.lot-list li.epark a,
+.lot-list li.epark a:hover {
+  height: 100px;
+}
+.lot-list li.epark .wrapper {
+  height: 100px;
+}
+.lot-list .epark-wrapper {
+  display: none;
+  margin-left: 36px;
+}
+.wrapper .icon {
+  position: absolute;
+  display: block;
+  top: 8px;
+  left: -8px;
+  width: 34px;
+  height: 34px;
+  background-size: 673px 673px;
+}
+.wrapper .lot-icon {
+  position: absolute;
+  display: block;
+  top: 14px;
+  left: 7px;
+  width: 22px;
+  height: 22px;
+  background-size: 673px 673px;
+}
+.lot-title {
+  display: inline-block;
+  padding: 0 40px 0 36px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 17px;
+}
+.no-icon {
+  padding-left: 0;
+}
+.thumbnail {
+  position: absolute;
+}
+.download-thumbnail {
+  padding-left: 70px;
+}
+.cross-streets,
+.download-size {
+  display: inline-block;
+  padding: 0 62px 0 36px;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 16px;
+}
+.download-size {
+  padding-left: 70px;
+}
+.icon-regular {
+  background: url(../img/sprites.png) 0 0 no-repeat;
+}
+.icon-low {
+  background: url(../img/sprites.png) -22px -22px no-repeat;
+}
+.icon-flat {
+  background: url(../img/sprites.png) -583px -583px no-repeat;
+}
+.icon-epark {
+  background: url(../img/sprites.png) -44px -44px no-repeat;
+}
+
+.lot-list li .back {
+  position: relative;
+  display: block;
+  padding-left: 36px;
+  line-height: 50px;
+  background: #008fd5;
+  color: white;
+  text-transform: uppercase;
+}
+.lot-list li .back:hover {
+  background: #bce9ff;
+  color: #0074ad;
+}
+.lot-list li .back .point {
+  position: absolute;
+  top: -3px;
+  left: 6px;
+  font-size: 28px;
+}
+
+.nearby-lots,
+.nearby-cheap-lots {
+  display: block;
+}
+.nearby-cheap-lots {
+  border-top: 1px solid #0074ad;
+  border-bottom: 3px solid #f7941e;
+}
+
+.info-links,
+.nearby-link {
+  position: relative;
+  height: 30px;
+  margin: 0;
+  padding: 10px 20px;
+  list-style-type: none;
+  background: #bce9ff;
+}
+.info-links li,
+.nearby-link li {
+  display: block;
+  position: absolute;
+  top: 10px;
+  width: 41%;
+  height: 30px;
+  background: white;
+}
+.nearby-link li {
+  position: static;
+  width: 100%;
+  margin: 0 auto;
+}
+.info-links li.directions {
+  left: 20px;
+}
+.info-links li.phone {
+  right: 20px;
+}
+.info-links a,
+.info-links a:hover,
+.nearby-link a,
+.nearby-link a:hover {
+  display: block;
+  height: 30px;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  color: #0074ad;
+}
+
+.content {
+  margin: 0;
+  padding: 10px 20px;
+  background: white;
+  color: black;
+}
+.home .content {
+  margin-top: 20px;
+  padding: 0;
+}
+.address {
+  margin-top: 5px;
+}
+.infowindow .cross-streets {
+  display: block;
+  padding: 0;
+  font-size: 12px;
+  line-height: 19px;
+}
+.infowindow .epark-info .data {
+  line-height: 20px;
+}
+.mini-map {
+  width: 100%;
+  height: 250px;
+}
+
+.features {
+  list-style-type: none;
+  padding-left: 0;
+}
+.features li {
+  display: inline-block;
+  height: 25px;
+  margin-right: 10px;
+  padding-left: 30px;
+  line-height: 25px;
+}
+.features li.low {
+  background: url(../img/key-low.png) no-repeat;
+}
+.features li.flat {
+  background: url(../img/key-flat.png) no-repeat;
+}
+.features li.epark {
+  background: url(../img/key-epark.png) no-repeat;
+}
+
+.rates h3,
+.hours h3 {
+  padding: 0 10px;
+  background: #008fd5;
+  color: white;
+}
+.rates table,
+.hours table {
+  margin: 0 10px;
+}
+.hours p {
+  padding: 0 10px;
+}
+
+.epark-info {
+  position: relative;
+  display: none;
+  margin: 10px 0;
+}
+.epark-info .icon {
+  position: absolute;
+  top: 9px;
+  left: 0;
+  width: 34px;
+  height: 34px;
+  background: url(../img/sprites.png) -134px -134px no-repeat;
+  background-size: 673px 673px;
+}
+.epark-info .data {
+  margin-bottom: 20px;
+  padding: 5px 0 0 45px;
+  height: 35px;
+  line-height: 22px;
+}
+.epark-info .open-spaces {
+  margin-right: 20px;
+  font-weight: bold;
+}
+.epark-info .capacity {
+  font-weight: bold;
+}
+.lot-list .total-bar,
+.epark-info .total-bar {
+  position: relative;
+  width: 100%;
+  height: 16px;
+  margin-top: 5px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background: #051a49;
+}
+.lot-list .full-bar,
+.epark-info .full-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70%;
+  height: 16px;
+  text-align: center;
+  overflow: hidden;
+  font-size: 13px;
+  line-height: 16px;
+  color: white;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background: url(../img/full_box.png) repeat;
+  background-size: 20px 20px;
+}
+
+article.lot td {
+  margin: 0;
+  padding: 0;
+}
+article.lot td:first-child {
+  width: 6em;
+}
+
+.mobile header p.hours-intro {
+  font-size: 14px;
+  padding-bottom: 15px;
+}
+.hours-lots h2 {
+  height: 32px;
+  background-color: #0074ad;
+}
+
+.hours-lots h2,
+.neighborhood-lots h2 {
+  height: 30px;
+  margin: 0;
+  padding-left: 10px;
+  line-height: 30px;
+  font-size: 18px;
+  background: #0074ad;
+  color: white;
+}
+
+.overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+.overlay .spinner {
+  display: none;
+}
+.overlay .message {
+  display: none;
+  position: absolute;
+  top: 20px;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  padding: 20px;
+  background: white;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background: #bce9ff;
+}
+.overlay .message p {
+  margin-top: 0;
+}
+.overlay .message a,
+.overlay .message a:hover {
+  display: block;
+  width: 100%;
+  height: 30px;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  background: white;
+  color: #0074ad;
+}
+
+.mobile-info {
+  clear: both;
+  margin: 10px;
+  padding: 10px 0;
+  font-size: 15px;
+  line-height: 1.4em;
+}
+.mobile-press-room,
+.mobile-business-tools,
+.mobile-faq {
+  display: none;
+}
+
+/* ==|== media queries ======================================================
+   ========================================================================== */
+@media only screen and (max-width: 767px) {
+  .mobile-home {
+    display: block;
+  }
+  .search {
+    /* top: 93px; */
+    top: 43px;
+    width: 100%;
+  }
+  .mobile-home .banner-ad {
+    width: 100%;
+    height: 50px;
+    background-color: white;
+  }
+  .mobile-home .banner-ad a {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 50px;
+    z-index: 100;
+  }
+  .mobile-home .mothers-day a,
+  .mobile-home .first-thursdays a,
+  .mobile-home .first-and-columbia a,
+  .mobile-home .waterfront a {
+    background-image: none;
+  }
+  .mobile-home .mothers-day span,
+  .mobile-home .first-thursdays span,
+  .mobile-home .first-and-columbia span,
+  .mobile-home .waterfront span {
+    display: block;
+    width: 480px;
+    height: 50px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+  }
+  .mobile-home .mothers-day span {
+    background-image: url(../img/banner-mother-mobile-landscape.png);
+  }
+  .mobile-home .first-thursdays span {
+    background-image: url(../img/banner-thursday-mobile-landscape.png);
+  }
+  .mobile-home .first-and-columbia span {
+    background-image: url(../img/banner-columbia-mobile-landscape.png);
+  }
+  .mobile-home .waterfront span {
+    background-image: url(../img/banner-waterfront-mobile-landscape.png);
+  }
+  .sidebar {
+    display: none;
+  }
+  .map-container {
+    display: none;
+  }
+  footer {
+    position: static;
+  }
+  footer a,
+  footer a:hover {
+    text-decoration: none;
+  }
+  .contact-us:after,
+  .press-room:after,
+  .business-tools:after,
+  .faq:after {
+    content: " | ";
+    margin-left: 6px;
+    color: white;
+  }
+  footer .social {
+    display: none;
+  }
+
+}
+
+@media only screen and (max-width: 480px) {
+  .mobile-home .banner-ad a {
+    display: block;
+    width: 100%;
+    height: 50px;
+  }
+  .mobile-home .mothers-day a,
+  .mobile-home .first-thursdays a,
+  .mobile-home .first-and-columbia a,
+  .mobile-home .waterfront a {
+    background-image: none;
+  }
+  .mobile-home .mothers-day span,
+  .mobile-home .first-thursdays span,
+  .mobile-home .first-and-columbia span,
+  .mobile-home .waterfront span {
+    display: block;
+    width: 320px;
+    height: 50px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+  }
+  .mobile-home .mothers-day span {
+    background-image: url(../img/banner-mother-mobile-portrait.png);
+  }
+  .mobile-home .first-thursdays span {
+    background-image: url(../img/banner-thursday-mobile-portrait.png);
+  }
+  .mobile-home .first-and-columbia span {
+    background-image: url(../img/banner-columbia-mobile-portrait.png);
+  }
+  .mobile-home .waterfront span {
+    background-image: url(../img/banner-waterfront-mobile-portrait.png);
+  }
+  .lot-list {
+    margin-top: 0;
+  }
+  .mobile-home .lot-list {
+    margin-top: 70px;
+  }
+  footer {
+    margin: 0;
+  }
+}
+
+/* ==|== non-semantic helper classes ========================================
+   Please define your styles before this section.
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    border: 0;
+    font: 0/0 a;
+    text-shadow: none;
+    color: transparent;
+    background-color: transparent;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Contain floats: h5bp.com/q
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+
+
+/* ==|== print styles =======================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow:none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
