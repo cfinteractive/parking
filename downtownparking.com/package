@@ -1,4 +1,0 @@
-#!/bin/sh
-cd _site
-zip -r ../_build/parking-site.zip .
-cd ..

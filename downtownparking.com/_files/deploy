@@ -1,3 +1,0 @@
-#!/bin/sh
-
-aws s3 sync . s3://downtownseattleparking/files --acl public-read --exclude deploy
